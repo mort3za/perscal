@@ -5,7 +5,7 @@ const jalaali = require("jalaali-js");
 
 program
   .option("-t, --timestamp <seconds>", "Unix timestamp (seconds since 1970-01-01 00:00:00 UTC)")
-  .option("-dt, --datetime <datetime>", "Gregorian datetime (YYYY-MM-DD HH:mm) or other standard formats like ISO 8601")
+  .option("-dt, --date <date-string>", "Gregorian date (YYYY-MM-DD) or other standard formats e.g. ISO 8601")
   .option("-y, --year <year>", "Gregorian year")
   .option("-m, --month <month>", "Gregorian month")
   .option("-d, --day <day>", "Gregorian day")
@@ -27,12 +27,12 @@ function exit(message, code = 0) {
   process.exit(code);
 }
 
-function toPersian({ timestamp, datetime, year, month = "01", day = "01" }) {
+function toPersian({ timestamp, date, year, month = "01", day = "01" }) {
   if (timestamp) {
     return jalaali.toJalaali(new Date(timestamp * 1000));
   }
-  if (datetime) {
-    return jalaali.toJalaali(new Date(datetime));
+  if (date) {
+    return jalaali.toJalaali(new Date(date));
   }
   if (year) {
     const yyyy = year.padStart(4, "0");
@@ -53,7 +53,7 @@ function toGreg({ persianDate, persianYear, persianMonth = 1, persianDay = 0 }) 
 }
 
 const PERSIAN_PARAMS = ["persianDate", "persianYear", "persianMonth", "persianDay"];
-const GREG_PARAMS = ["timestamp", "datetime", "year", "month", "day"];
+const GREG_PARAMS = ["timestamp", "date", "year", "month", "day"];
 
 const isInputDatePersian = PERSIAN_PARAMS.some((param) => options[param]);
 const isInputDateGregorian = GREG_PARAMS.some((param) => options[param]);
@@ -64,7 +64,7 @@ function printPersianDate(jdObject) {
 }
 
 function printGregorianDate(dObject) {
-  const gdString = `${dObject.gy}-${dObject.gm}-${dObject.gd}`;
+  const gdString = `${dObject.gy}${options.separator}${dObject.gm}${options.separator}${dObject.gd}`;
   console.log(gdString);
 }
 
@@ -80,7 +80,7 @@ function main() {
   } else if (isInputDateGregorian) {
     const converted = toPersian({
       timestamp: options.timestamp,
-      datetime: options.datetime,
+      date: options.date,
       year: options.year,
       month: options.month,
       day: options.day,

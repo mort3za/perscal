@@ -1,6 +1,6 @@
 {
   "name": "perscal",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Persian calendar in your terminal",
   "main": "index.js",
   "author": "Morteza Ziyaeimehr <m.ziaeemehr@gmail.com>",
