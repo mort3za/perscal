@@ -1,12 +1,13 @@
 {
   "name": "perscal",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Persian calendar in your terminal",
   "main": "index.js",
   "author": "Morteza Ziyaeimehr <m.ziaeemehr@gmail.com>",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "node index.js",
+    "perscal": "node index.js"
   },
   "bin": {
     "perscal": "index.js"
