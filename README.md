@@ -1,4 +1,4 @@
-# PersCal - Persian-Gregorian Calendar Converter
+# PersCal - Persian-Gregorian Date Converter for CLI
 
 This is a command-line interface (CLI) tool for converting between Gregorian and Persian calendars. The tool is built with Node.js and utilizes the `jalaali-js` package for the calendar conversion.
 
