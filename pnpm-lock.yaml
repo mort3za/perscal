@@ -1,0 +1,20 @@
+lockfileVersion: 5.4
+
+specifiers:
+  commander: ^10.0.0
+  jalaali-js: ^1.2.6
+
+dependencies:
+  commander: 10.0.0
+  jalaali-js: 1.2.6
+
+packages:
+
+  /commander/10.0.0:
+    resolution: {integrity: sha512-zS5PnTI22FIRM6ylNW8G4Ap0IEOyk62fhLSD0+uHRT9McRCLGpkVNvao4bjimpK/GShynyQkFFxHhwMcETmduA==}
+    engines: {node: '>=14'}
+    dev: false
+
+  /jalaali-js/1.2.6:
+    resolution: {integrity: sha512-io974va+Qyu+UfuVX3UIAgJlxLhAMx9Y8VMfh+IG00Js7hXQo1qNQuwSiSa0xxco0SVgx5HWNkaiCcV+aZ8WPw==}
+    dev: false

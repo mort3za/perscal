@@ -1,0 +1,28 @@
+{
+  "name": "perscal",
+  "version": "1.0.0",
+  "description": "Persian calendar in your terminal",
+  "main": "index.js",
+  "author": "Morteza Ziyaeimehr <m.ziaeemehr@gmail.com>",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "perscal",
+    "persian",
+    "calendar",
+    "cli",
+    "terminal",
+    "date",
+    "time",
+    "moment",
+    "jalaali",
+    "jalali"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^10.0.0",
+    "jalaali-js": "^1.2.6"
+  }
+}
