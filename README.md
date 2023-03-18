@@ -1,6 +1,6 @@
 # PersCal - Persian-Gregorian Date Converter for CLI
 
-This is a command-line interface (CLI) tool for converting between Gregorian and Persian calendars. The tool is built with Node.js and utilizes the `jalaali-js` package for the calendar conversion.
+This is a command-line interface (CLI) tool for converting between Gregorian and Persian calendars. The tool is built with Node.js and utilizes the [jalaali-js](https://github.com/jalaali/jalaali-js) package for the calendar conversion.
 
 ## Installation
 
@@ -13,7 +13,7 @@ Or without installation:
 
 ## Usage
 
-The tool provides several options for converting between the calendars. You can use the `--help` option to see the available options:
+You can use the `--help` option to see the available options:
 
 `perscal --help`
 
@@ -27,11 +27,11 @@ You can convert a Gregorian date to Persian using the following options:
 - `-m, --month <month>`: Gregorian month
 - `-d, --day <day>`: Gregorian day
 
-Example usage:
+Example:
 
 `perscal` // output: 1401-12-27  
 `perscal --date 2023-03-18` // 1401-12-27  
-`perscal --year 2023 --month 3 --day 18` // output: 1401-12-27  
+`perscal --year 2023 --month 3 --day 18` // output: 1401-12-27
 
 ### Converting Persian to Gregorian
 
@@ -42,20 +42,19 @@ You can convert a Persian date to Gregorian using the following options:
 - `-pm, --persian-month <persian-month>`: Persian month
 - `-pdy, --persian-day <persian-day>`: Persian day
 
-Example usage:
+Example:
 
 `perscal --persian-date 1401-12-27` // output: 2023-3-18  
-`perscal --persian-year 1401 --persian-month 12 --persian-day 27` // output: 2023-3-18  
+`perscal --persian-year 1401 --persian-month 12 --persian-day 27` // output: 2023-3-18
 
 ### Output Separator for Persian Date
 
 To specify the separator character, use `-s, --separator <char>` option for the output. The default separator is `-`.
 
-Example usage:
+Example:
 
-`perscal --year 2022 --month 3 --day 18 --separator /`  
+`perscal --year 2022 --month 3 --day 18 --separator /`
 
 ## License
 
 This tool is licensed under the MIT license. See the [LICENSE](LICENSE) file for details.
-
