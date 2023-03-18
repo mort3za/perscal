@@ -1,6 +1,6 @@
 {
   "name": "perscal",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Persian calendar in your terminal",
   "main": "index.js",
   "author": "Morteza Ziyaeimehr <m.ziaeemehr@gmail.com>",
@@ -26,7 +26,10 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "commander": "^10.0.0",
+    "commander": "10.0.0",
     "jalaali-js": "^1.2.6"
+  },
+  "devDependencies": {
+    "@types/jalaali-js": "^1.1.0"
   }
 }

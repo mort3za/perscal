@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@types/jalaali-js': ^1.1.0
   commander: ^10.0.0
   jalaali-js: ^1.2.6
 
@@ -8,7 +9,14 @@ dependencies:
   commander: 10.0.0
   jalaali-js: 1.2.6
 
+devDependencies:
+  '@types/jalaali-js': 1.1.0
+
 packages:
+
+  /@types/jalaali-js/1.1.0:
+    resolution: {integrity: sha512-C/tbcdjhPllUUKOtaUSPlDdkjJN+k1/5zqqiJiHLpt3gNuIh6I17/3D8T/nPcSSdfCuLTRbhEwjJCapoQveHXQ==}
+    dev: true
 
   /commander/10.0.0:
     resolution: {integrity: sha512-zS5PnTI22FIRM6ylNW8G4Ap0IEOyk62fhLSD0+uHRT9McRCLGpkVNvao4bjimpK/GShynyQkFFxHhwMcETmduA==}
